@@ -77,5 +77,9 @@ gem 'jquery-rails'
 
 gem "sassc-rails"
 
-gem 'mini_rancer','0.12.0'
-gem 'libv8-node','21.7.2.0'
+# gem 'mini_racer', '0.12.0'
+# gem 'libv8-node', '21.7.2.0'
+
+gem 'devise'
+
+gem 'kaminari'
