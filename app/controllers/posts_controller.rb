@@ -21,9 +21,9 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
-    @post_detail = post.find(params[:id])
-    unless ViewCount.find_by(user_id: current_user.id,post_id: @post_detail.id)
-      current_user.view_counts.create(post_id: @post_detail.id)
+    @post = Post.find(params[:id])
+    unless ReadCount.find_by(user_id: current_user.id,post_id: @post.id)
+      current_user.read_counts.create(post_id: @post.id)
     end
     @comment = Comment.new
     @comments = @post.comments.page(params[:page]).per(7).reverse_order
