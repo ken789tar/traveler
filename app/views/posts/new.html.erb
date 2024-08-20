@@ -24,18 +24,22 @@
       </div>
       <div class="form-group mb-3">
         <label class="form-label">【画像】</label><br>
-        <%= f.file_field :image %>
+        <%= f.file_field :image %><br>
         <label class="form-label">【評価】</label><br>
-        <% if post.id.nil? %>
+        <% if @post.id.nil? %>
           <div class="form-group" id="star">
             <%= f.label :star %>
             <%= f.hidden_field :star, id: :review_star, class: 'form-control' %>
             <div id="post_raty"></div>
           </div>
           <script>
-            $(document).on('turbolinks:load', function() {
+            document.addEventListener('turbo:load', function() {
+              console.log('Turbo loaded');
               let elem = document.querySelector('#post_raty');
-              if (elem == null) return;
+              if (elem == null) {
+                console.log('Element not found');
+                return;
+              }
 
               elem.innerHTML = ""
               let opt = {
@@ -49,7 +53,7 @@
           </script>
         <% else %>
           <div class="form-group">
-            <%= render "static_rate", post: post %>
+            <%= render 'rate', post: post %>
           </div>
         <% end %>
       </div>
