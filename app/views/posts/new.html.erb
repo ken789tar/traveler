@@ -33,24 +33,15 @@
             <div id="post_raty"></div>
           </div>
           <script>
-            document.addEventListener('turbo:load', function() {
-              console.log('Turbo loaded');
-              let elem = document.querySelector('#post_raty');
-              if (elem == null) {
-                console.log('Element not found');
-                return;
-              }
-
-              elem.innerHTML = ""
-              let opt = {
-                starOn: "<%= asset_path('star-on.png') %>",
-                starOff: "<%= asset_path('star-off.png') %>",
-                starHalf: "<%= asset_path('star-half.png') %>",
-                scoreName: 'post[star]',
-              };
-              raty(elem,opt);
+            $('#star').empty();
+            $('#star').raty({
+              size     : 36,
+              starOff:  '<%= asset_path('star-off.png') %>',
+              starOn : '<%= asset_path('star-on.png') %>',
+              scoreName: 'post[star]',
+              half: false
             });
-          </script>
+            </script>
         <% else %>
           <div class="form-group">
             <%= render 'rate', post: post %>
