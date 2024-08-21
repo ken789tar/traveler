@@ -16,4 +16,4 @@ $(document).ready(function() {
     $('#star').raty();
   });
 
-import moduleName from './module.js'
+
