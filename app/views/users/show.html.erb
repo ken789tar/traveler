@@ -6,7 +6,21 @@
       <% else %>
       <h1 class="font-weigth-normal"><%= @user.name %>さんのページ</h1>
       <% end %>
-    </div>
+    </div><br>
+    <% unless @user.id == current_user.id %>
+      <% if (current_user.following? @user) && (@user.following? current_user) %>
+      <% if @is_room == true %>
+        <p class="user-show-room"><a href="/rooms/<%= @room_id %>" class="btn btn-primary btn-sm">チャットを始める</a></p>
+      <% else %>
+        <%= form_for @room do |f| %>
+          <%= fields_for @entry do |e| %>
+            <%= e.hidden_field :user_id, value: @user.id %>
+          <% end %>
+          <%= f.submit "チャットを始める", class:"btn btn-primary btn-sm" %>
+        <% end %>
+      <% end %>
+      <% end %>
+    <% end %>
     <% if user_signed_in? && @user == current_user %>
     <p class="d-flex align-self-end">
       <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %>
