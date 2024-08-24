@@ -1,7 +1,20 @@
 class RoomsController < ApplicationController
-def create
-  @room = Room.create
-  @current_entry = @room.entries.create(user_id: current_user.id)
-  @another_entry = @room.entries.create(user_id: params[:entry][:user_id])
-  redirect_to room_path(@room)
+  def create
+    @room = Room.create(user_id: current_user.id)
+    @current_entry = @room.entries.create(user_id: current_user.id, room_id: @room.id)
+    @another_entry = @room.entries.create(params.require(:entry).permit(:user_id, :room_id).merge(:room_id => @room.id))
+    redirect_to room_path(@room)
+  end
+
+  def show
+    @room = Room.find(params[:id])
+    if Entry.where(user_id: current_user.id, room_id: @room.id)present?
+      @messages = @room.messages
+      @message = Message.new
+      @entries = @room.entries
+      @my_account = current_user.id
+    else
+      redirect_back(fallback_location: root_path)
+    end
+  end
 end
