@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <% @entries.each do |e| %>
+      <% if @my_account != e.user.id %>
+        <h4><strong><%= e.user.name %>さんとのトークルーム</strong></h4>
+      <% end %>
+    <% end %>
+  </div>
