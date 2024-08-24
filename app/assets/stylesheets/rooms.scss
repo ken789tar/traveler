@@ -1,0 +1,62 @@
+.cover-new {
+    height: 100%;
+    width: 100%;
+    background-image: url(/assets/new2.jpg);
+    background-color: rgba(255,255,255,0.4);
+    background-blend-mode: lighten;
+    background-size: 100% 100%;
+}
+
+.line-bc {
+    padding: 20px 10px;
+    width: 80%;
+    margin: 15px auto;
+    text-align: left;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+.balloon6 {
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.balloon6.chatting {
+    width: 100%;
+    text-align: left;
+}
+
+.says {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 50px 0;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #ff9999;
+}
+
+// .says:after {
+//     content:"";
+//     display: inline-block;
+//     position: absolute;
+//     top: 3px;
+//     right: -19px;
+//     border: 8px solid transparent;
+//     border-left: 18px solid #edf1ee;
+// }
+
+.mycomment {
+    margin: 10px 0;
+}
+.mycomment p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #66ffcc;
+    font-size: 15px;
+}
