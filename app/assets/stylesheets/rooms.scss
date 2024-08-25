@@ -8,72 +8,74 @@
 }
 
 .chat-container {
-    display: flex;
+    padding: 20px 10px;
+    width: 50%;
+    margin: 15px 15px;
+    text-align: left;
+    font-size: 14px;
     flex-direction: colum;
     background: #ffffff;
 }
 
-.message-left {
-    align-self: flex-start;
-    background-color: #ff9999;
+.balloon6 {
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.balloon6.chatting {
+    width: 100%;
+    text-align: right;
+}
+
+.says {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 50px;
     padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #ff9999;
 }
 
-.message-right {
-    align-self: flex-end;
-    background-color: aquamarine;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.says:after {
+    content:"";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: -19px;
+    border: 8px solid transparent;
+    border-right: 18px solid #edf1ee;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
 }
 
-.message-content {
-    max-width: 60%;
+.say p {
+    margin: 0;
+    padding: 0;
 }
 
-// .balloon6 {
-//     width: 100%;
-//     margin: 10px 0;
-//     overflow: hidden;
-// }
+.mycomment {
+    margin: 10px 0;
+}
+.mycomment p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #66ffcc;
+    font-size: 15px;
+}
 
-// .balloon6.chatting {
-//     width: 100%;
-//     text-align: left;
-// }
-
-// .says {
-//     display: inline-block;
-//     position: relative;
-//     margin: 0 0 50px 0;
-//     padding: 10px;
-//     max-width: 250px;
-//     border-radius: 12px;
-//     background: #ff9999;
-// }
-
-// // .says:after {
-// //     content:"";
-// //     display: inline-block;
-// //     position: absolute;
-// //     top: 3px;
-// //     right: -19px;
-// //     border: 8px solid transparent;
-// //     border-left: 18px solid #edf1ee;
-// // }
-
-// .mycomment {
-//     margin: 10px 0;
-// }
-// .mycomment p {
-//     display: inline-block;
-//     position: relative;
-//     margin: 0 10px 0 0;
-//     padding: 8px;
-//     max-width: 250px;
-//     border-radius: 12px;
-//     background: #66ffcc;
-//     font-size: 15px;
-// }
+.mycomment p:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -19px;
+    border: 8px solid transparent;
+    border-left: 18px solid #30e852;
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+  }
