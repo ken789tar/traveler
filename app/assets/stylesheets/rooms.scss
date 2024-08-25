@@ -11,7 +11,7 @@
     padding: 20px 10px;
     width: 50%;
     margin: 15px 15px;
-    text-align: left;
+    text-align: center;
     font-size: 14px;
     flex-direction: colum;
     background: #ffffff;
@@ -56,8 +56,14 @@
 }
 
 .mycomment {
+    max-width: 60%;
     margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    aligin-self: flex-start;
+    background-color: #ff9999;
 }
+
 .mycomment p {
     display: inline-block;
     position: relative;
