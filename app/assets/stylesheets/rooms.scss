@@ -7,56 +7,73 @@
     background-size: 100% 100%;
 }
 
-.line-bc {
-    padding: 20px 10px;
-    width: 80%;
-    margin: 15px auto;
-    text-align: left;
-    font-size: 14px;
+.chat-container {
+    display: flex;
+    flex-direction: colum;
     background: #ffffff;
 }
 
-.balloon6 {
-    width: 100%;
-    margin: 10px 0;
-    overflow: hidden;
-}
-
-.balloon6.chatting {
-    width: 100%;
-    text-align: left;
-}
-
-.says {
-    display: inline-block;
-    position: relative;
-    margin: 0 0 50px 0;
+.message-left {
+    align-self: flex-start;
+    background-color: #ff9999;
     padding: 10px;
-    max-width: 250px;
-    border-radius: 12px;
-    background: #ff9999;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-// .says:after {
-//     content:"";
-//     display: inline-block;
-//     position: absolute;
-//     top: 3px;
-//     right: -19px;
-//     border: 8px solid transparent;
-//     border-left: 18px solid #edf1ee;
+.message-right {
+    align-self: flex-end;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.message-content {
+    max-width: 60%;
+}
+
+// .balloon6 {
+//     width: 100%;
+//     margin: 10px 0;
+//     overflow: hidden;
 // }
 
-.mycomment {
-    margin: 10px 0;
-}
-.mycomment p {
-    display: inline-block;
-    position: relative;
-    margin: 0 10px 0 0;
-    padding: 8px;
-    max-width: 250px;
-    border-radius: 12px;
-    background: #66ffcc;
-    font-size: 15px;
-}
+// .balloon6.chatting {
+//     width: 100%;
+//     text-align: left;
+// }
+
+// .says {
+//     display: inline-block;
+//     position: relative;
+//     margin: 0 0 50px 0;
+//     padding: 10px;
+//     max-width: 250px;
+//     border-radius: 12px;
+//     background: #ff9999;
+// }
+
+// // .says:after {
+// //     content:"";
+// //     display: inline-block;
+// //     position: absolute;
+// //     top: 3px;
+// //     right: -19px;
+// //     border: 8px solid transparent;
+// //     border-left: 18px solid #edf1ee;
+// // }
+
+// .mycomment {
+//     margin: 10px 0;
+// }
+// .mycomment p {
+//     display: inline-block;
+//     position: relative;
+//     margin: 0 10px 0 0;
+//     padding: 8px;
+//     max-width: 250px;
+//     border-radius: 12px;
+//     background: #66ffcc;
+//     font-size: 15px;
+// }
