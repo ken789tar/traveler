@@ -11,11 +11,9 @@
     <% if @messages.present? %>
       <% @messages.each do |m| %>
         <% if @myUserId == m.user.id %>
-            <div class="mycomment">
-              <p><%= m.message %></p>
-            </div>
+          <div class="mycomment">
+            <p><%= m.message %></p>
           </div>
-        </div>
         <% else %>
           <p style="text-align: right;"></p>
             <div class="says">
