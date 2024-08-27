@@ -22,7 +22,7 @@
     justify-content: flex-start;
     margin: 0 400px 0 0;
     padding: 10px 10px 0 10px ;
-    max-width: 250px;
+    width: fit-content;
     text-align: left;
     overflow-wrap:  break-word;
     overflow: hidden;
@@ -35,7 +35,7 @@
     justify-content: flex-end;
     margin: 0 0 0 400px;
     padding: 10px 10px 0 10px;
-    max-width: 250px;
+    width: fit-content;
     text-align: left;
     overflow-wrap:  break-word;
     overflow: hidden;
