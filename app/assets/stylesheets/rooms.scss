@@ -1,4 +1,4 @@
-.cover-new {
+.cover-room {
     height: 100%;
     width: 100%;
     background-image: url(/assets/new2.jpg);
@@ -18,22 +18,35 @@
 }
 
 .says {
-    display: inline-block;
-    position: relative;
-    margin: 0 0 0 100px;
-    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 400px 0 0;
+    padding: 10px 10px 0 10px ;
     max-width: 250px;
-    text-align: right;
+    text-align: left;
+    overflow-wrap:  break-word;
+    overflow: hidden;
     border-radius: 12px;
     background: #ff9999;
 }
 
 .mycomment {
-    display: inline-block;
-    position: relative;
-    margin: 0 0 0 0;
-    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 400px;
+    padding: 10px 10px 0 10px;
     max-width: 250px;
+    text-align: left;
+    overflow-wrap:  break-word;
+    overflow: hidden;
     border-radius: 12px;
     background: #66ffcc;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.name {
+    color: rgb(30, 0, 255);
 }
