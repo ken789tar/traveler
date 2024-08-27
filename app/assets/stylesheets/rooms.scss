@@ -8,18 +8,18 @@
 }
 
 .chat-container {
+    display: flex;
+    flex-direction: column;
     padding: 20px 10px;
     width: 100%;
     margin: 15px 15px;
-    text-align: center;
     font-size: 14px;
     flex-direction: colum;
     background: #ffffff;
 }
 
 .says {
-    display: flex;
-    justify-content: flex-start;
+    align-items: left;
     margin: 0 400px 0 0;
     padding: 10px 10px 0 10px ;
     width: fit-content;
@@ -31,8 +31,7 @@
 }
 
 .mycomment {
-    display: flex;
-    justify-content: flex-end;
+    align-items: right;
     margin: 0 0 0 400px;
     padding: 10px 10px 0 10px;
     width: fit-content;
