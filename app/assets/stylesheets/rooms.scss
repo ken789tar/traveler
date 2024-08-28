@@ -19,7 +19,7 @@
 }
 
 .says {
-    align-items: left;
+    align-self: flex-start;
     margin: 0 400px 0 0;
     padding: 10px 10px 0 10px ;
     width: fit-content;
@@ -31,7 +31,7 @@
 }
 
 .mycomment {
-    align-items: right;
+    align-self: flex-end;
     margin: 0 0 0 400px;
     padding: 10px 10px 0 10px;
     width: fit-content;
